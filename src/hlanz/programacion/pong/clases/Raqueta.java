@@ -1,4 +1,4 @@
 package hlanz.programacion.pong.clases;
 
-public class Raqueta {
+public class Raqueta extends ObjetoGrafico {
 }
