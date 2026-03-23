@@ -31,9 +31,9 @@ public class JugadorHumano extends Jugador{
     @Override
     public void realizarMovimiento() {
         if(this.teclado.teclaPulsada(this.teclaArriba)){
-
+            this.getRaqueta().moverArriba();
         }else if(this.teclado.teclaPulsada(this.teclaAbajo)){
-
+            this.getRaqueta().moverAbajo();
         }
 
     }

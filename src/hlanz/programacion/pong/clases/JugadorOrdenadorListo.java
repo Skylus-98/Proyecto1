@@ -9,6 +9,13 @@ public class JugadorOrdenadorListo extends JugadorOrdenador{
 
     @Override
     public void realizarMovimiento() {
-
+        int bolaP = this.getBola().getAltura();
+        int raquetaP = this.getRaqueta().getAltura();
+        if(bolaP > raquetaP){
+            this.getRaqueta().moverAbajo();
+        }
+        if(bolaP < raquetaP){
+            this.getRaqueta().moverArriba();
+        }
     }
 }

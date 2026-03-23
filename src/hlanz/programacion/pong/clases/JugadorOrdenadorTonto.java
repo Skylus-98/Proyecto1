@@ -11,6 +11,16 @@ public class JugadorOrdenadorTonto extends JugadorOrdenador{
 
     @Override
     public void realizarMovimiento() {
-
+        if(this.getRaqueta().getAltura() <= 0){
+            this.subir = false;
+        }
+        if(this.getRaqueta().getAltura() >= 1080){
+            this.subir = true;
+        }
+        if(this.subir){
+            this.getRaqueta().moverArriba();
+        }else{
+            this.getRaqueta().moverAbajo();
+        }
     }
 }
