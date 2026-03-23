@@ -6,15 +6,18 @@ import java.awt.*;
 
 public class JugadorHumano extends Jugador{
     private int teclaArriba;
-    private int tecladoAbajo;
+    private int teclaAbajo;
     private Teclado teclado;
 
-    public Jugador(Teclado t, Color c, int x, int tAr, int tAb){
+    public JugadorHumano(Teclado t, Color c, int x, int tAr, int tAb){
         super(c,x);
+        this.teclado = t;
+        this.teclaArriba = tAr;
+        this.teclaAbajo = tAb;
     }
 
     public int getTecladoAbajo() {
-        return tecladoAbajo;
+        return teclaAbajo;
     }
 
     public Teclado getTeclado() {
@@ -23,5 +26,15 @@ public class JugadorHumano extends Jugador{
 
     public int getTeclaArriba() {
         return teclaArriba;
+    }
+
+    @Override
+    public void realizarMovimiento() {
+        if(this.teclado.teclaPulsada(this.teclaArriba)){
+
+        }else if(this.teclado.teclaPulsada(this.teclaAbajo)){
+
+        }
+
     }
 }
