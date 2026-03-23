@@ -1,8 +1,5 @@
 package hlanz.programacion.pong.clases;
 
-import bpc.daw.consola.CapaSprites;
-import bpc.daw.consola.Sprite;
-
 import java.awt.*;
 
 public abstract class ObjetoGrafico {
@@ -14,11 +11,12 @@ public abstract class ObjetoGrafico {
     private Color color;
 
     //constructores
-    public ObjetoGrafico(int x, int y, int anchura, int altura) {
+    public ObjetoGrafico(int x, int y, int anchura, int altura, Color color) {
         this.x = x;
         this.y = y;
         this.anchura = anchura;
         this.altura = altura;
+        this.color = color;
     }
 
     //getters
